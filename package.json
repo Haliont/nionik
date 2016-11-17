@@ -8,6 +8,7 @@
     "url": "https://github.com/andrew--r/startanul.git"
   },
   "scripts": {
+  	"start": "./node_modules/.bin/gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andrew Romanov",
