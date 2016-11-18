@@ -1,0 +1,63 @@
+.hybrid-nav
+	display block
+	width 100%
+	font-size $font-size
+	
+	+below($desktop)
+		position fixed
+		top 0
+		left 0
+		right 0
+		bottom 0
+		display flex
+		align-items center
+		justify-content center
+		visibility hidden
+		overflow-y auto
+		opacity 0
+		background rgba(#fff, .95)
+
+	&[data-menu-visible]
+		+below($desktop)
+			opacity 1
+			visibility visible
+
+	&__inner
+		display flex
+		align-items center
+		justify-content space-between
+		padding 15px 0
+
+		+below($desktop)
+			display block
+			max-width 320px
+			width 100%
+			margin auto
+
+	&__close
+		position fixed
+		top 10px
+		right 10px
+		display none
+
+		+below($desktop)
+			display block
+
+	&__phone
+		flexible()
+		text-align right
+		margin-right 12px
+		
+		+below($desktop)
+			display none
+	
+	&__menu,
+	&__products
+		+below($desktop)
+			max-width 260px
+			width 100%
+			margin auto
+
+	&__menu
+		display flex
+		align-items center

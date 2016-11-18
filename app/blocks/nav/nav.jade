@@ -1,7 +1,8 @@
-mixin nav(items)
+mixin nav(items, withActive)
 	+b.UL.nav&attributes(attributes)
-		+e.LI.item--active
-			+e.A.link(href=jv0)= items[0]
-		- for item in items.slice(1)
+		- if (withActive)
+			+e.LI.item--active
+				+e.A.link(href=jv0)= items[0]
+		- for item in (withActive ? items.slice(1) : items)
 			+e.LI.item
 				+e.A.link(href=jv0)= item

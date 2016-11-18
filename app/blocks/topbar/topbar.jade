@@ -1,13 +1,20 @@
 include ../logo/logo
-include ../nav/nav
+include ../hybrid-nav/hybrid-nav
+include ../phone-link/phone-link
+include ../close-btn/close-btn
+include ../burger/burger
+
+- var phone = '8 (800) 555-55-50'
 
 mixin topbar()
 	+b.topbar&attributes(attributes)
 		+e.inner
+			+e.burger
+				+burger()(data-menu='show')
 			+e.logo
 				+logo()
-			+e.products
-				+nav(['Smart Baby Watch', 'Q50', 'Q60', 'T100'])
-			+e.menu
-				+e.A.phone(href="tel:88005555550") 8 (800) 555-55-50
-				+nav(['Доставка', 'Поддержка', 'Войти'])
+			+e.hybrid-nav
+				+hybrid-nav()(data-menu='true')
+			+e.phone
+				+phone-link(phone)
+			

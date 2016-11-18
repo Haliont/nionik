@@ -1,5 +1,14 @@
 .logo
 	hidetext()
-	size(98px, 30px)
+	font-size $logo-size
+	size(1em, .40816327em)
 	background-image svg('logo.svg')
-	background-size cover
+	background-size 1em .30612245em
+	background-repeat no-repeat
+	background-position 0 0
+
+	+below($desktop)
+		font-size $logo-size-mobile
+	
+	.topbar--pinned &
+		background-image svg('logo.svg', '[fill]: #fff')

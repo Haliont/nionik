@@ -1,0 +1,22 @@
+.close-btn
+	hidetext()
+	size(1em)
+	font-size $close-button-size
+	border 0
+	outline 0
+	border-radius 100%
+	background-color #fff
+	background-image svg('close.svg')
+	background-size .375em
+	background-repeat no-repeat
+	background-position center
+	box-shadow 0 .0375em .25em 0 rgba(0, 0, 0, 0.1), 0 .0125em .05em 0 rgba(0, 0, 0, 0.2)
+	transition background $animation-speed ease, box-shadow $animation-speed ease
+
+	+below($desktop)
+		font-size $close-button-size-mobile
+
+	&:hover,
+	&:focus
+		background-color $accent
+		background-image svg('close.svg', '[fill]: #fff')

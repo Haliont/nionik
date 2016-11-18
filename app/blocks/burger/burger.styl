@@ -1,0 +1,29 @@
+.burger
+	hidetext()
+	position relative
+	display block
+	font-size $burger-size
+	width 1em
+	height .15em
+	margin-top .3em
+	margin-bottom .4em
+	border 0
+	border-radius .2em
+	background $accent
+	
+
+	&::before,
+	&::after
+		content ''
+		position absolute
+		left 0
+		right 0
+		height .15em
+		border-radius .2em
+		background $accent
+	
+	&::before
+		top -.3em
+	
+	&::after
+		bottom -.3em

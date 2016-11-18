@@ -1,27 +1,45 @@
 .nav
+	display block
+	width 100%
 	list-style none
 	font-size 0
-	
+
 	&__item
 		display inline-block
+		font-size $font-size
+		
+		+below($desktop)
+			display block
+			width 100%
+			text-align center
+		
+		&:not(:last-child)
+			+below($desktop)
+				margin-bottom .625em
+		
+		&--active
+			&:not(:first-child)
+				margin-left .625em
+			
+			&:not(:last-child)
+				margin-right .625em
 
 	&__link
 		display block
-		height 30px
-		padding 0 10px
-		font-size 14px
-		line-height 30px
-		border-radius 7px
+		height 2.14285714em
+		padding .14285714em .71428571em 0
+		font-size .875em
+		line-height 2em
+		border-radius .5em
 		color #7c8ca2
 		transition color $animation-speed ease
-
+		
 		&:hover,
 		&:focus
 			color $accent
 			transition none
 
 		.nav__item--active &
-			margin 0 5px
 			font-weight bold
 			color #fff
 			background-color $accent

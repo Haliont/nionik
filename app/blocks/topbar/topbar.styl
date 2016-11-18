@@ -1,21 +1,71 @@
 .topbar
 	display flex
 	align-items center
-	height 80px
+	font-size $topbar-height
+	height 1em
 	background-color #fff
-	box-shadow 0 8px 32px -16px rgba(0, 0,0, .5)
+	transition background .5s ease
+
+	+below($desktop)
+		font-size $topbar-height-mobile
+	
+	&--pinned
+		background-color $accent
+		background-image linear-gradient(to right, #ef74fb 0%, $accent 100%)
+		
+		.burger,
+		.burger::before,
+		.burger::after
+			background #fff
 
 	&__inner
 		display flex
 		align-items center
 		justify-content space-between
-		width $content-width
+		max-width $content-width
+		height 100%
+		width 100%
 		margin auto
 		padding 0 $content-padding
+		
+		+below($desktop)
+			padding 0 $content-padding-mobile
 	
-	&__menu
-		display flex
-		align-items center
+	&__burger
+		display none
+		
+		+below($desktop)
+			display block
+			margin-right $burger-size * .5
 
+	&__logo
+		unflexible()
+		margin-right $logo-size
+		
+		+below($desktop)
+			margin-right $logo-size-mobile * .35
+
+	&__hybrid-nav
+		flexible()
+
+		.topbar--pinned &
+			visibility hidden
+			opacity 0
+
+			+below($desktop)
+				visibility visible
+				opacity 1
+		
 	&__phone
-			margin-right 22px
+		display none
+		font-size .175em
+
+		+below($desktop)
+			display block
+			font-size .28em
+		
+		.topbar--pinned &
+			display block
+			
+			.phone-link
+				color #fff

@@ -1,0 +1,15 @@
+include ../close-btn/close-btn
+include ../nav/nav
+include ../phone-link/phone-link
+
+mixin hybrid-nav()
+	+b.hybrid-nav&attributes(attributes)
+		+e.inner
+			+e.close
+				+close-btn()(data-menu='hide')
+			+e.products
+				+nav(['Smart Baby Watch', 'Q50', 'Q60', 'T100'], true)
+			+e.phone
+				+phone-link(phone)
+			+e.menu
+				+nav(['Доставка', 'Поддержка', 'Войти'])
