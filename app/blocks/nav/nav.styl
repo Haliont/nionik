@@ -1,0 +1,27 @@
+.nav
+	list-style none
+	font-size 0
+	
+	&__item
+		display inline-block
+
+	&__link
+		display block
+		height 30px
+		padding 0 10px
+		font-size 14px
+		line-height 30px
+		border-radius 7px
+		color #7c8ca2
+		transition color $animation-speed ease
+
+		&:hover,
+		&:focus
+			color $accent
+			transition none
+
+		.nav__item--active &
+			margin 0 5px
+			font-weight bold
+			color #fff
+			background-color $accent

@@ -1,0 +1,13 @@
+include ../logo/logo
+include ../nav/nav
+
+mixin topbar()
+	+b.topbar&attributes(attributes)
+		+e.inner
+			+e.logo
+				+logo()
+			+e.products
+				+nav(['Smart Baby Watch', 'Q50', 'Q60', 'T100'])
+			+e.menu
+				+e.A.phone(href="tel:88005555550") 8 (800) 555-55-50
+				+nav(['Доставка', 'Поддержка', 'Войти'])

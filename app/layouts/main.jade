@@ -3,14 +3,14 @@ include ../../node_modules/bemto.jade/bemto
 
 include ../jade-tools/scripts
 
-include ../blocks/header/header
+include ../blocks/topbar/topbar
 include ../blocks/footer/footer
 
 doctype html
 html(lang='ru')
 	include ../blocks/head/head
 	body
-		+header()
+		+topbar()
 		block content
 		+footer()
 		block scripts
