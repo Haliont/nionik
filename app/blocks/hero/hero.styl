@@ -1,0 +1,92 @@
+.hero
+	position relative
+	overflow hidden
+	background-image url('/assets/images/map.png')
+
+	&::before,
+	&::after
+		content ''
+		position absolute
+		z-index 1
+		left 0
+		right 0
+		
+	&::before
+		top 0
+		height 160px
+		background-image linear-gradient(to bottom, #fff 0%, rgba(#fff, .65) 65%, transparent 100%)
+	
+	&::after
+		bottom 0
+		height 450px
+		background-image linear-gradient(to top, #fff 0%, rgba(#fff, .7) 50%, transparent 100%)
+	
+	&__waves
+		position absolute
+		z-index 0
+		top 50px
+		left 50%
+		transform translateX(-50%)
+
+	&__inner
+		position relative
+		max-width $content-width
+		width 100%
+		margin auto
+		padding 120px $content-padding 0
+		text-align center
+		
+		+below($desktop)
+			padding 90px $content-padding-mobile 0
+		
+		+below($tablet)
+			padding-top 60px
+		
+		+below($mobile)
+			padding-top 30px
+
+	&__text,
+	&__buttons,
+	&__watches-img
+		position relative
+		z-index 2
+	
+	&__text
+		padding-bottom 30px
+	
+	&__watches-name
+		display block
+	
+	&__buttons
+		z-index 3
+	
+	&__button
+		display inline-block
+		
+		+below($tablet)
+			display table
+			width 200px
+			margin auto
+
+			&:not(:last-child)
+				margin-bottom 10px
+
+		&:not(:first-child)
+			margin-left 10px
+			
+			+below($tablet)
+				margin-left auto
+
+	&__watches-img
+		font-size 580px
+		height 1em
+		margin-top -.08em
+		
+		+below($desktop)
+			font-size 480px
+		 
+		+below($tablet)
+			font-size 300px
+		
+		+below($mobile)
+			font-size 250px

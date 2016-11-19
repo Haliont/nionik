@@ -7,7 +7,7 @@
 	&__item
 		display inline-block
 		font-size $font-size
-		
+
 		+below($desktop)
 			display block
 			width 100%
@@ -20,9 +20,15 @@
 		&--active
 			&:not(:first-child)
 				margin-left .625em
+				
+				+below($desktop)
+					margin-left 0
 			
 			&:not(:last-child)
 				margin-right .625em
+				
+				+below($desktop)
+					margin-left 0
 
 	&__link
 		display block
@@ -30,16 +36,18 @@
 		padding .14285714em .71428571em 0
 		font-size .875em
 		line-height 2em
-		border-radius .5em
+		border-bottom 2px solid transparent
 		color #7c8ca2
-		transition color $animation-speed ease
-		
+		transition color $animation-speed ease, border-color $animation-speed
+
 		&:hover,
 		&:focus
 			color $accent
+			border-bottom-color $accent
 			transition none
 
 		.nav__item--active &
 			font-weight bold
 			color #fff
 			background-color $accent
+			border-radius .5em

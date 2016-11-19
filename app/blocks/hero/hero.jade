@@ -1,0 +1,19 @@
+include ../title/title
+include ../subtitle/subtitle
+include ../button/button
+include ../waves/waves
+
+mixin hero()
+	+b.hero&attributes(attributes)
+		+e.waves
+			+waves()
+		+e.inner
+			+e.text
+				+title() Детские часы с&nbsp;#[span.u-nobr GPS-трекером]<br/>Smart Baby Watch&nbsp;Q50
+				+subtitle() Вы&nbsp;всегда знаете, где ваш ребенок
+			+e.buttons
+				+e.button
+					+button().--fullwidth Купить за 3 999 ₽
+				+e.button
+					+button().--play.--fullwidth Как это работает
+			+e.IMG.watches-img(src='assets/images/hero@2x.png')

@@ -2,9 +2,10 @@
 	display block
 	width 100%
 	font-size $font-size
-	
+
 	+below($desktop)
 		position fixed
+		z-index 9999
 		top 0
 		left 0
 		right 0
@@ -15,7 +16,7 @@
 		visibility hidden
 		overflow-y auto
 		opacity 0
-		background rgba(#fff, .95)
+		background #fff
 
 	&[data-menu-visible]
 		+below($desktop)
@@ -47,6 +48,7 @@
 		flexible()
 		text-align right
 		margin-right 12px
+		font-size .875em
 		
 		+below($desktop)
 			display none

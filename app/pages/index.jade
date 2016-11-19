@@ -1,6 +1,9 @@
 extends ../layouts/main
 
+include ../blocks/hero/hero
+
 block head
 	- var pageTitle = 'nionik — детские часы с GPS-трекером';
 
 block content
+	+hero()

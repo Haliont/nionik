@@ -1,0 +1,53 @@
+.button
+	display inline-block
+	height 3.75em
+	padding .3125em 1.875em 0
+	font-weight bold
+	font-size $font-size
+	line-height 3.4375em
+	letter-spacing 1px
+	border 0
+	border-radius .625em
+	color #fff
+	background-color #f36eff
+	background-image linear-gradient(to right, #f36eff 0%, $accent 100%)
+	box-shadow 0 .125em 1.25em 0 rgba(197, 130, 230, 0.6), 0 .0625em .125em 0 rgba(197, 130, 230, 0.5)
+	cursor pointer
+	transition all $animation-speed
+	
+	+below($desktop)
+		font-size .85em
+	
+	+below($tablet)
+		font-size .75em
+
+	&:hover,
+	&:focus
+		background-color #f36eff
+		background-image linear-gradient(to right, #f36eff 0%, #f36eff 100%)
+		box-shadow 0 .125em 1.5625em 0 #c682e6, 0 .0625em .3125em 0 #c682e6
+	
+	&--fullwidth
+		width 100%
+	
+	&--play
+		position relative
+		padding-left 55px
+		padding-right 20px
+		color $accent
+		background #fff
+		box-shadow none
+		
+		&:hover,
+		&:focus
+			color #fff
+		
+		&::before
+			content ''
+			position absolute
+			top 50%
+			left 20px
+			transform translateY(-50%)
+			size(25px)
+			background-image svg('play.svg')
+			background-size cover
