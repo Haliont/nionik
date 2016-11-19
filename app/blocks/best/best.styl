@@ -1,0 +1,40 @@
+.best
+	&__inner
+		max-width $content-width
+		width 100%
+		margin auto
+		padding 70px $content-padding 140px
+		text-align center
+
+		+below($desktop)
+			padding 60px $content-padding-mobile 110px
+
+		+below($tablet)
+			padding-top 40px
+			padding-bottom 80px
+
+	&__icon
+		margin-bottom 10px
+
+		+below($tablet)
+			margin-bottom 20px
+
+		+below($mobile)
+			margin-bottom 15px
+
+	.title
+		font-weight 400
+		letter-spacing 0px
+
+	&__subtitle
+		display inline-block
+		max-width 730px
+		font-size 21px
+		line-height 1.42857143
+		color #63768f
+
+		+below($tablet)
+			font-size 19px
+
+		+below($mobile)
+			font-size 18px

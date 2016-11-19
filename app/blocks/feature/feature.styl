@@ -1,0 +1,21 @@
+.feature
+	display block
+	text-align center
+
+	&__icon
+		display inline-block
+		size(180px)
+		margin-bottom 26px
+		border-radius 100%
+		background $accent
+
+		+below($mobile)
+			size(140px)
+			margin-bottom 20px
+
+	&__text
+		font-size 21px
+		line-height 1.2
+
+		+below($mobile)
+			font-size 18px

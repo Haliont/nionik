@@ -1,0 +1,18 @@
+.angled
+	position relative
+	display block
+	padding-bottom 150px
+
+	&::before,
+	&::after
+		content ''
+		position absolute
+		z-index -1
+		left 0
+		right 0
+		background #fbf4f3
+
+	&::before
+		height 100%
+		transform-origin left bottom
+		transform skewY(-7deg)

@@ -1,0 +1,9 @@
+include ../feature/feature
+
+mixin features()
+	+b.features&attributes(attributes)
+		+e.inner
+			+e.item
+				+feature('Если ребёнок снимет часы, вы получите уведомление! В любой момент позвоните ребёнку прямо на часы')
+			+e.item
+				+feature('С помощью встроенного микрофона узнайте,что происходит вокруг ребенка пока вы заняты!')

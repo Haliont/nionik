@@ -1,0 +1,12 @@
+include ../subtitle/subtitle
+
+mixin sos()
+	+b.sos&attributes(attributes)
+		+e.inner
+			+e.left
+				+e.IMG.image(src='assets/images/sos.png')
+			+e.right
+				+e.paragraph
+					+subtitle() В&nbsp;случае опасности ребенку нужно нажать кнопку SOS.
+				+e.paragraph
+					+subtitle() Дополнительные кнопки для связи с&nbsp;мамой или&nbsp;папой.

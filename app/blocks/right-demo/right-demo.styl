@@ -1,0 +1,61 @@
+.right-demo
+	background-color $accent
+	background-image linear-gradient(to right, #f36eff, $accent)
+
+	&__inner
+		position relative
+		max-width $content-width
+		width 100%
+		height 100%
+		margin auto
+		padding-top 95px
+		padding-left $content-padding
+		padding-right 34%
+		padding-bottom 300px
+		margin-bottom 90px
+
+		+below($desktop)
+			padding-top 64px
+			padding-left $content-padding-mobile
+			padding-bottom 260px
+
+		+below($tablet)
+			padding-top 44px
+			padding-right $content-padding-mobile
+			padding-bottom 200px
+			margin-bottom 50px
+
+		+below($mobile)
+			padding-top 24px
+			padding-bottom 180px
+
+	&__text
+		font-size 30px
+		line-height 1.3333
+		color #fff
+
+		+below($desktop)
+			font-size 26px
+
+		+below($tablet)
+			font-size 22px
+
+		+below($mobile)
+			font-size 20px
+
+		b
+			font-weight 700
+
+	&__image
+		position absolute
+		width 34%
+		right 40px
+		bottom -80px
+
+		+below($tablet)
+			left 50%
+			right auto
+			bottom -40px
+			width auto
+			height 200px
+			transform translateX(-50%)

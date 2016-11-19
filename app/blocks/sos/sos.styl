@@ -1,0 +1,33 @@
+.sos
+	display block
+
+	&__inner
+		display flex
+		align-items center
+		max-width $content-width
+		width 100%
+		margin auto
+		padding 50px $content-padding
+
+		+below($desktop)
+			padding $content-padding-mobile
+
+		+below($tablet)
+			display block
+			text-align center
+
+	&__left
+		unflexible()
+
+	&__image
+		size(330px)
+
+		+below($tablet)
+			size(250px)
+
+		+below($mobile)
+			size(200px)
+
+	&__paragraph
+		&:not(:last-child)
+			margin-bottom 8px

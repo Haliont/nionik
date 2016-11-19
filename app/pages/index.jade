@@ -2,6 +2,11 @@ extends ../layouts/main
 
 include ../blocks/hero/hero
 include ../blocks/app-promo/app-promo
+include ../blocks/angled/angled
+include ../blocks/sos/sos
+include ../blocks/features/features
+include ../blocks/right-demo/right-demo
+include ../blocks/best/best
 
 block head
 	- var pageTitle = 'nionik — детские часы с GPS-трекером';
@@ -9,3 +14,8 @@ block head
 block content
 	+hero()
 	+app-promo()
+	+angled()
+		+sos()
+	+features()
+	+right-demo()
+	+best()

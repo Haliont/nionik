@@ -1,0 +1,26 @@
+.features
+	&__inner
+		display flex
+		justify-content space-around
+		max-width $content-width
+		width 100%
+		margin auto
+		padding 150px $content-padding 160px
+
+		+below($desktop)
+			padding 50px $content-padding-mobile 60px
+
+		+below($tablet)
+			display block
+			text-align center
+
+	&__item
+		display inline-block
+		max-width 420px
+
+		&:not(:last-child)
+			margin-right 40px
+
+			+below($tablet)
+				margin-right 0
+				margin-bottom 50px
