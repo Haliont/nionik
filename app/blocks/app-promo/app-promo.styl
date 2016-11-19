@@ -1,0 +1,101 @@
+.app-promo
+	display block
+	// background url('/assets/images/hero.png') no-repeat right center
+
+	&__inner
+		max-width $content-width
+		width 100%
+		margin auto
+		padding 80px $content-padding 150px
+
+		+below($desktop)
+			padding 60px $content-padding-mobile 100px
+
+	&__title
+		max-width 436px
+		font-weight 400
+		font-size 30px
+		line-height 1.33333
+		color #252525
+
+		+below($desktop)
+			font-size 28px
+
+		+below($tablet)
+			font-size 24px
+
+		+below($mobile)
+			font-size 20px
+
+	&__list
+		max-width 470px
+		width 100%
+		list-style none
+
+	&__item
+		position relative
+		z-index 1
+		width 100%
+		padding-top 33px
+		padding-left 50px
+		padding-bottom 33px
+		font-size 21px
+		line-height 1.2
+		color #63768f
+
+		+below($desktop)
+			font-size 19px
+
+		+below($tablet)
+			font-size 18px
+
+		+below($mobile)
+			font-size 16px
+
+		&:not(:last-child)
+			border-bottom 1px dotted $accent
+
+		&::before,
+		&::after
+			content ''
+			position absolute
+			z-index -1
+			bottom 38px
+
+		&::before
+			content ''
+			left 0
+			background-size cover
+
+		&::after
+			width 55px
+			top 0
+			left 20px
+			background-image linear-gradient(to right, rgba(#fff, 0), #ffffff)
+
+		&--flag::before
+			size(68px, 86px)
+			background-image svg('flag.svg')
+
+		&--notifications::before
+			size(64px, 70px)
+			background-image svg('notifications.svg')
+
+	&__text
+		width calc(100% + 50px)
+
+		+below($tablet)
+			width 100%
+
+	&__appstore-buttons
+		font-size 0
+		padding-top 8px
+
+		+below($mobile)
+			text-align center
+
+	&__appstore-button
+		display inline-block
+
+		&:not(:last-child)
+			margin-right 10px

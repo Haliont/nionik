@@ -1,0 +1,16 @@
+include ../appstore/appstore
+
+mixin app-promo()
+	+b.app-promo&attributes(attributes)
+		+e.inner
+			+e.H2.title Мощный процессор часов позволяет быстро определять данные по&nbsp;GPS
+			+e.UL.list
+				+e.LI.item--flag
+					+e.text Просматривайте в&nbsp;приложении на&nbsp;телефоне или&nbsp;планшете историю всех передвижений ребёнка.
+				+e.LI.item--notifications
+					+e.text Часы оповестят, когда ребёнок достигнет конца маршрута, удалится на&nbsp;большое расстояние или&nbsp;свернёт с&nbsp;маршрута.
+			+e.appstore-buttons
+				+e.appstore-button
+					+appstore(jv0, 'Загрузите на Google Play').--android
+				+e.appstore-button
+					+appstore(jv0, 'Доступно в App Store').--ios
