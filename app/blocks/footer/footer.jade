@@ -1,2 +1,18 @@
+include ../waves/waves
+include ../title/title
+include ../subtitle/subtitle
+include ../button/button
+
+
 mixin footer()
 	+b.footer&attributes(attributes)
+		+e.waves
+			+waves()
+		+e.inner
+			+e.title
+				+title() Скидка 500&nbsp;₽ при&nbsp;заказе сразу двух часов
+			+e.subtitle
+				+subtitle() или 1&nbsp;000&nbsp;₽ при&nbsp;покупке трех
+			+e.button
+				+button() Купить за 3&nbsp;999&nbsp;₽
+			+e.copyright &copy;&nbsp;Nionik. 2016

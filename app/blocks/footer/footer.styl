@@ -1,2 +1,44 @@
 .footer
+	position relative
 	display block
+	overflow hidden
+
+	&__waves
+		position absolute
+		z-index 1
+		top 0
+		left 50%
+		transform translateX(-50%)
+
+	&__inner
+		position relative
+		z-index 2
+		max-width $content-width
+		width 100%
+		margin auto
+		padding 120px $content-padding 28px
+		text-align center
+
+		+below($desktop)
+			padding 100px $content-padding-mobile 20px
+
+	&__title,
+	&__subtitle
+		max-width 600px
+		margin auto
+
+	&__title
+		padding-bottom 8px
+
+	&__button
+		padding-top 30px
+
+	&__copyright
+		padding-top 130px
+		color #63768f
+
+		+below($tablet)
+			padding-top 100px
+
+		+below($mobile)
+			padding-top 60px
