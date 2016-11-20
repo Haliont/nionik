@@ -10,6 +10,9 @@ include ../blocks/best/best
 include ../blocks/info/info
 include ../blocks/order/order
 include ../blocks/video/video
+include ../blocks/modal/modal
+include ../blocks/success-order/success-order
+include ../blocks/form/form
 
 
 block head
@@ -26,3 +29,7 @@ block content
 	+info()
 	+order()
 	+video()
+	+modal()
+		+success-order()
+	+modal()
+		+form()

@@ -1,0 +1,11 @@
+include ../circle-preview/circle-preview
+include ../subtitle/subtitle
+
+
+mixin success-order()
+	+b.success-order&attributes(attributes)
+		+e.preview
+			+circle-preview()
+		+e.title
+			+subtitle() Спасибо! Заказ оформлен
+		+e.P.annotation Александр, менеджер свяжется с&nbsp;вами в&nbsp;ближайшее время.

@@ -1,0 +1,12 @@
+include ../circle-preview/circle-preview
+include ../subtitle/subtitle
+
+
+mixin form()
+	+b.form&attributes(attributes)
+		+e.intro
+			+e.preview
+				+circle-preview()
+			+e.title
+				+subtitle() Оформление заказа
+			+e.annotation Оставьте свои данные и&nbsp;мы свяжемся с&nbsp;вами в&nbsp;ближайшее время, чтобы обсудить детали.

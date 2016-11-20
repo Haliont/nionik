@@ -1,0 +1,42 @@
+.modal
+	position fixed
+	z-index 9999
+	top 0
+	left 0
+	right 0
+	bottom 0
+	padding 10px
+	display flex
+	align-items center
+	justify-content center
+	overflow-y auto
+	background rgba(#000, .8)
+
+	&__window
+		position relative
+		max-width 600px
+		width 100%
+		margin auto
+		padding 62px
+		border-radius 10px
+		background #fff
+
+		+below($tablet)
+			padding 32px
+
+		+below($mobile)
+			padding 32px 16px 16px
+
+	&__close
+		position absolute
+		top 16px
+		right 16px
+		size(30px)
+		background-image svg('cross.svg')
+		background-size cover
+		cursor pointer
+
+		+below($tablet)
+			top 8px
+			right 8px
+			size(20px)

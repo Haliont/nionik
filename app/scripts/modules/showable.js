@@ -14,6 +14,11 @@ export default function initMenu() {
 	hideButtons.forEach((button) => {
 		button.addEventListener('click', () => {
 			const target = button.getAttribute('data-hide');
+
+			if (target === 'video' && window.videoPlayer) {
+				window.videoPlayer.pauseVideo();
+			}
+
 			document.querySelector(`[data-target="${target}"]`).setAttribute('data-visible', 'false');
 		});
 	});
