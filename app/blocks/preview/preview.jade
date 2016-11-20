@@ -1,0 +1,9 @@
+include ../button-light/button-light
+
+mixin preview(imgname)
+	+b.preview&attributes(attributes)
+		+e.inner
+			+e.image
+				img(src='assets/images/' + imgname)
+			+e.button
+				+button-light() Купить за 2690 ₽

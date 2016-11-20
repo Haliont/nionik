@@ -1,0 +1,23 @@
+include ../title/title
+include ../subtitle/subtitle
+include ../preview/preview
+
+mixin order()
+	+b.order&attributes(attributes)
+		+e.inner
+			+e.text
+				+title() Закажите детские часы с&nbsp;#[span.u-nobr GPS-трекером] прямо сейчас
+				+subtitle() Доставка в #[a(href=jv0 class="order__choose-location") Санкт-Петербург] от 150 руб
+			+e.items
+				+e.item
+					+preview('white.png').--white
+				+e.item
+					+preview('pink.png').--pink
+				+e.item
+					+preview('blue.png').--blue
+				+e.item
+					+preview('cyan.png').--cyan
+				+e.item
+					+preview('black.png').--black
+				+e.item
+					+preview('green.png').--green

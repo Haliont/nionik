@@ -1,0 +1,42 @@
+.order
+	&__inner
+		max-width $content-width
+		width 100%
+		margin auto
+		padding 126px 0
+		text-align center
+
+		+below($desktop + $content-padding-mobile)
+			padding 106px $content-padding-mobile
+
+	&__text
+		max-width 750px
+		margin auto
+		padding-bottom 80px
+
+		.title
+			font-weight 400
+			letter-spacing 0
+
+	&__choose-location
+		color $accent
+		border-bottom 1px dashed
+
+	&__items
+		display flex
+		flex-wrap wrap
+		justify-content space-between
+
+	&__item
+		width 31.25%
+		unflexible()
+		margin-bottom 30px
+
+		+below($tablet)
+			width 45%
+
+		+below($mobile)
+			max-width 320px
+			width 100%
+			margin 0 auto 30px
+
