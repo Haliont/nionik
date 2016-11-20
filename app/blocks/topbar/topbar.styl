@@ -1,18 +1,29 @@
 .topbar
 	display flex
 	align-items center
-	font-size $topbar-height
-	height 1em
+	height 5em
+	font-size $font-size
 	background-color #fff
 	transition background .5s ease
 
 	+below($desktop)
-		font-size $topbar-height-mobile
-	
+		height 3.125em
+
 	&--pinned
+		position fixed
+		top 0
+		left 0
+		right 0
+		z-index 9998
+		height 3.75em
 		background-color $accent
 		background-image linear-gradient(to right, #ef74fb 0%, $accent 100%)
-		
+		transform translateY(-100%)
+		transition transform $animation-speed
+
+		&[data-visible='true']
+			transform translateY(0)
+
 		.burger,
 		.burger::before,
 		.burger::after
@@ -27,21 +38,24 @@
 		width 100%
 		margin auto
 		padding 0 $content-padding
-		
+
 		+below($desktop)
 			padding 0 $content-padding-mobile
-	
+
 	&__burger
 		display none
-		
+
 		+below($desktop)
 			display block
 			margin-right $burger-size * .5
 
+		.topbar--pinned &
+			display none
+
 	&__logo
 		unflexible()
 		margin-right $logo-size
-		
+
 		+below($desktop)
 			margin-right $logo-size-mobile * .35
 
@@ -55,17 +69,32 @@
 			+below($desktop)
 				visibility visible
 				opacity 1
-		
+
 	&__phone
 		display none
-		font-size .175em
+		font-size .875em
 
 		+below($desktop)
 			display block
-			font-size .28em
-		
+
 		.topbar--pinned &
 			display block
-			
+			flexible()
+			text-align right
+
+			+below($mobile)
+				display none
+
 			.phone-link
 				color #fff
+
+	&__button
+		display block
+		margin-left 25px
+		padding 0 1em
+		font-size .875em
+		line-height 2.7
+		unflexible()
+		border-radius .5em
+		color $accent
+		background #fff

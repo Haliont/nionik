@@ -5,12 +5,22 @@ include ../jade-tools/scripts
 
 include ../blocks/topbar/topbar
 include ../blocks/footer/footer
+include ../blocks/button-light/button-light
 
 doctype html
 html(lang='ru')
 	include ../blocks/head/head
 	body
 		+topbar()
+		+b.topbar--pinned
+			+e.inner
+				+e.burger
+					+burger()(data-menu='show')
+				+e.logo
+					+logo()
+				+e.phone
+					+phone-link(phone)
+				+e.A.button(href=jv0) Купить за 3&nbsp;999&nbsp;₽
 		block content
 		+footer()
 		block scripts
