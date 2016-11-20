@@ -1,15 +1,20 @@
 import nodeListToArray from '../utils/node-list-to-array.js';
 
 export default function initMenu() {
-	const show = document.querySelector('[data-menu="show"]');
-	const hide = document.querySelector('[data-menu="hide"]');
-	const menu = document.querySelector('[data-menu="true"]');
-	
-	show.addEventListener('click', () => {
-		menu.setAttribute('data-menu-visible', 'true');
+	const showButtons = nodeListToArray(document.querySelectorAll('[data-show]'));
+	const hideButtons = nodeListToArray(document.querySelectorAll('[data-hide]'));
+
+	showButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const target = button.getAttribute('data-show');
+			document.querySelector(`[data-target="${target}"]`).setAttribute('data-visible', 'true');
+		});
 	});
 
-	hide.addEventListener('click', () => {
-		menu.removeAttribute('data-menu-visible');
+	hideButtons.forEach((button) => {
+		button.addEventListener('click', () => {
+			const target = button.getAttribute('data-hide');
+			document.querySelector(`[data-target="${target}"]`).setAttribute('data-visible', 'false');
+		});
 	});
 }

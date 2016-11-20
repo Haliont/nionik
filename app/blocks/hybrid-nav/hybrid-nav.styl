@@ -18,7 +18,7 @@
 		opacity 0
 		background #fff
 
-	&[data-menu-visible]
+	&[data-visible='true']
 		+below($desktop)
 			opacity 1
 			visibility visible
@@ -49,10 +49,10 @@
 		text-align right
 		margin-right 12px
 		font-size .875em
-		
+
 		+below($desktop)
 			display none
-	
+
 	&__menu,
 	&__products
 		+below($desktop)

@@ -10,11 +10,11 @@ mixin topbar()
 	+b.topbar&attributes(attributes)
 		+e.inner
 			+e.burger
-				+burger()(data-menu='show')
+				+burger()(data-show='menu')
 			+e.logo
 				+logo()
 			+e.hybrid-nav
-				+hybrid-nav()(data-menu='true')
-			+e.phone
+				+hybrid-nav()(data-target='menu')
+			+e.phonu
 				+phone-link(phone)
-			
+
