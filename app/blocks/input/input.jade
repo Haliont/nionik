@@ -1,0 +1,9 @@
+mixin input(suggestOptions)
+	+b.input
+		+e.INPUT.field&attributes(attributes)
+		if (suggestOptions.length > 0)
+			+e.UL.suggest
+				each option in suggestOptions
+					+e.LI.suggest-item
+						b= option.slice(0, 3)
+						= option.slice(3)
