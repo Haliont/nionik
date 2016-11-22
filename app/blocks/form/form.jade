@@ -13,9 +13,11 @@ mixin form()
 			+e.annotation Оставьте свои данные и&nbsp;мы свяжемся с&nbsp;вами в&nbsp;ближайшее время, чтобы обсудить детали.
 		+e.FORM.form(action='' method='POST')
 			+e.row
-				+input([])(required='true' placeholder='Ваше имя')
+				+input([], 'Это не ваше имя')(required='true' placeholder='Ваше имя')
 			+e.row
 				+input([])(required='true' placeholder='Номер телефона')
 			+e.row
 				+input(['Москва', 'Новокузнецк', 'Новосибирск', 'Новомосковск', 'Новочеркасск', 'Новокузнецк', 'Омск'])(required='true' placeholder='Город доставки')
 				+e.row-annotation Доставка от 1 до 7 дней, от 165 ₽
+			+e.button
+				button(type="submit" class="button" data-show='success-order' data-hide='order') Оформить заказ

@@ -7,7 +7,7 @@ mixin order()
 		+e.inner
 			+e.text
 				+title() Закажите детские часы с&nbsp;#[span.u-nobr GPS-трекером] прямо сейчас
-				+subtitle() Доставка в #[a(href=jv0 class="order__choose-location") Санкт-Петербург] от 150 руб
+				+subtitle()(data-show='order') Доставка в #[a(href=jv0 class="order__link") Санкт-Петербург] от 150 руб
 			+e.items
 				+e.item
 					+preview('white.png').--white

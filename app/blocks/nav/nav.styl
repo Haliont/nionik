@@ -30,14 +30,17 @@
 				+below($desktop)
 					margin-left 0
 
-	&__link
+	&__link,
+	&__text
 		display block
 		height 2.14285714em
 		padding .14285714em .71428571em 0
 		font-size .875em
 		line-height 2em
-		border-bottom 2px solid transparent
 		color #7c8ca2
+
+	&__link
+		border-bottom 2px solid transparent
 		transition color $animation-speed ease, border-color $animation-speed
 
 		&:hover,

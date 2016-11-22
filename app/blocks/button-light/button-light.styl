@@ -5,14 +5,16 @@
 	background rgba(#fff, .5)
 	border-radius .625em
 	cursor pointer
-	transition transform $animation-speed ease
+	transition all $animation-speed
 	user-select none
 
 	+below($tablet)
 		font-size $font-size - 1px
 
-	&:hover
-		transform scale(1.05)
+	&:hover,
+	&:focus
+		background #fff
+		box-shadow 0 2px 25px 0 #ffffff
 
 	&__inner
 		height 2.5em
@@ -22,5 +24,9 @@
 		background #fff
 		border-radius .5em
 		border 1px solid $accent
+		transition all $animation-speed
 
-
+		.button-light:hover &,
+		.button-light:focus &
+			color #fff
+			background $accent

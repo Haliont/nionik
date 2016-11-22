@@ -11,6 +11,12 @@
 	justify-content center
 	overflow-y auto
 	background rgba(#000, .8)
+	visibility hidden
+	opacity 0
+
+	&[data-visible='true']
+		visibility visible
+		opacity 1
 
 	&__window
 		position relative

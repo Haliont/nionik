@@ -2,7 +2,7 @@ mixin nav(items, withActive)
 	+b.UL.nav&attributes(attributes)
 		- if (withActive)
 			+e.LI.item
-				+e.A.link(href=jv0)= items[0]
+				+e.text= items[0]
 			+e.LI.item--active
 				+e.A.link(href=jv0)= items[1]
 		- for item in (withActive ? items.slice(2) : items)

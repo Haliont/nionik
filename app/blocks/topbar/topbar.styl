@@ -95,9 +95,18 @@
 		display block
 		margin-left 25px
 		padding 0 1em
-		font-size .875em
+		font-weight 700
+		font-size .8125em
 		line-height 2.7
 		unflexible()
 		border-radius .5em
+		border 1px solid #fff
 		color $accent
 		background #fff
+		transition all $animation-speed
+
+		&:hover,
+		&:focus
+			color #fff
+			background $accent
+			box-shadow 0 2px 25px 0 #ffffff, 0 1px 5px 0 #ffffff

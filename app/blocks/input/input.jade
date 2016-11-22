@@ -1,6 +1,8 @@
-mixin input(suggestOptions)
-	+b.input
+mixin input(suggestOptions, error)
+	+b.input(class= error ? '--error' : '')
 		+e.INPUT.field&attributes(attributes)
+		if (error)
+			+e.error= error
 		if (suggestOptions.length > 0)
 			+e.UL.suggest
 				each option in suggestOptions
