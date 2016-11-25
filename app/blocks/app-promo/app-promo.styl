@@ -3,6 +3,7 @@
 	// background url('/assets/images/hero.png') no-repeat right center
 
 	&__inner
+		position relative
 		max-width $content-width
 		width 100%
 		margin auto
@@ -10,6 +11,20 @@
 
 		+below($desktop)
 			padding 60px $content-padding-mobile 100px
+
+	&__phone
+		position absolute
+		right 0
+		bottom 50px
+		width auto
+		height 560px
+
+		+below($desktop)
+			right 20px
+			bottom 25px
+
+		+below(900px)
+			display none
 
 	&__title
 		max-width 436px
